@@ -36,8 +36,8 @@ namespace SignalRApi.Controllers
 				Price = z.Price,
 				ProductID = z.ProductID,
 				TotalPrice = z.TotalPrice,
-				ProductName = z.Product.ProductName
-			}).ToList();
+                ProductName = z.Product != null ? z.Product.ProductName : string.Empty
+            }).ToList();
 			return Ok(values);
 		}
 
@@ -56,12 +56,16 @@ namespace SignalRApi.Controllers
 			});
 			return Ok();
 		}
-		[HttpDelete("{id}")]
-		public IActionResult DeleteBasket(int id)
-		{
-			var value = _basketService.TGetByID(id);
-			_basketService.TDelete(value);
-			return Ok("Sepetteki Seçilen Ürün Silindi");
-		}
-	}
+        [HttpDelete("{id}")]
+        public IActionResult DeleteBasket(int id)
+        {
+            var entity = _basketService.TGetByID(id);
+            if (entity is null)
+                return NotFound($"Sepette {id} numaralı ürün yok.");
+
+            _basketService.TDelete(entity);            // bu metod SaveChanges yapmalı
+            return Ok("Ürün sepetten silindi");
+        }
+
+    }
 }

@@ -25,16 +25,24 @@ namespace SignalRWebUI.Controllers
             }
             return View();
         }
+        [HttpGet]                                       // /Baskets/DeleteBasket/5
         public async Task<IActionResult> DeleteBasket(int id)
         {
-            id = int.Parse(TempData["id"].ToString());
+            if (id <= 0)                               // route’dan gelen id yanlışsa
+                return BadRequest("Geçersiz id");
+
+            // ► 7180 senin API projesinin gerçek portuysa absolute URL kullan
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.DeleteAsync($"https://localhost:7180/api/Basket/{id}");
-            if (responseMessage.IsSuccessStatusCode)
-            {
-                return RedirectToAction("Index");
-            }
-            return NoContent();
+            var response = await client.DeleteAsync(
+                             $"https://localhost:7180/api/Basket/{id}");
+
+            if (response.IsSuccessStatusCode)
+                return RedirectToAction("Index");      // sepet ekranına dön
+
+            // API 404/500 vb. dönerse
+            return StatusCode((int)response.StatusCode,
+                              "Silme işlemi sırasında API hatası oluştu.");
         }
+
     }
 }
