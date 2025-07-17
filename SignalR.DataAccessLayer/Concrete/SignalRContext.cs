@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using SignalR.EntityLayer.Entities;
 using SignalR.EntiyLayer.Entities;
 using System;
@@ -9,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace SignalR.DataAccessLayer.Concrete
 {
-    public class SignalRContext : DbContext
-    {
+    public class SignalRContext : IdentityDbContext<AppUser, AppRole, int>
+	{
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("server= DESKTOP-SCO6T6L\\SQLEXPRESS; database=SignalRDb;Trusted_Connection=True; integrated security=true; TrustServerCertificate=True;");

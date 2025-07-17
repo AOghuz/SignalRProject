@@ -5,6 +5,9 @@ using SignalR.DataAccessLayer.Concrete;
 using SignalR.DataAccessLayer.EntityFramework;
 using SignalRApi.Hubs;
 using System.Text.Json.Serialization;
+using SignalR.BusinessLayer.ValidationRules.BookingValidations;
+using FluentValidation;
+
 
 
 
@@ -79,7 +82,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+builder.Services.AddValidatorsFromAssemblyContaining<CreateBookingValidation>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
