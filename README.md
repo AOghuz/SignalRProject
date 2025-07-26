@@ -66,3 +66,55 @@
 
 ## 📦 Proje Yapısı
 
+📸 Admin Paneli - Ekran Görüntüleri
+Aşağıda admin paneline ait ekran görüntülerine yer verilmiştir. Her sayfa, yöneticiye kolay kullanım ve anlık veri takibi imkânı sunar.
+
+🖼️ Hakkımda Sayfası
+SignalRWebUI/wwwroot/signalrimages/admin/about.png
+
+
+🖼️ Anlık Durum Paneli
+SignalRWebUI/wwwroot/signalrimages/admin/anlikdurum.png
+
+🖼️ Bildirim Sayfası
+SignalRWebUI/wwwroot/signalrimages/admin/bildirim.png
+
+🖼️ İletişim Mesajları
+SignalRWebUI/wwwroot/signalrimages/admin/iletisim.png
+
+🖼️ İndirim Kuponları
+SignalRWebUI/wwwroot/signalrimages/admin/indirim.png
+
+🖼️ İstatistik Paneli
+SignalRWebUI/wwwroot/signalrimages/admin/istatistik.png
+
+🖼️ Kategori Yönetimi
+SignalRWebUI/wwwroot/signalrimages/admin/kategori.png
+
+🖼️ Mail Gönderme Sayfası
+SignalRWebUI/wwwroot/signalrimages/admin/mail.png
+
+🖼️ Masa Durumları
+SignalRWebUI/wwwroot/signalrimages/admin/masadurumlari.png
+
+🖼️ Masa Listesi
+SignalRWebUI/wwwroot/signalrimages/admin/masalist.png
+
+🖼️ Öne Çıkanlar
+SignalRWebUI/wwwroot/signalrimages/admin/onecikanlar.png
+
+🖼️ QR Kod Oluşturucu
+SignalRWebUI/wwwroot/signalrimages/admin/qrcode.png
+
+🖼️ Referanslar
+SignalRWebUI/wwwroot/signalrimages/admin/referans.png
+
+🖼️ Rezervasyon Yönetimi
+SignalRWebUI/wwwroot/signalrimages/admin/rezervasyon.png
+
+🖼️ Ayarlar Sayfası
+SignalRWebUI/wwwroot/signalrimages/admin/setting.png
+
+🖼️ Ürün Yönetimi
+SignalRWebUI/wwwroot/signalrimages/admin/ürün.png
+
