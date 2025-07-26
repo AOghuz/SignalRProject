@@ -101,7 +101,8 @@ Kullanıcının seçtiği ürünleri listeleme ve toplam tutar gösterimi.
 ### 🖼️ Ürün Ekleme Bildirimi  
 Kullanıcıya başarılı ürün ekleme bildirimi ekranı.  
 ![urunekleme](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/urunekleme.png)
-
+### 🖼️ Anlık Mesajlaşma
+![urunekleme](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/anlikmesaj.png)
 
 
 
