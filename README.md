@@ -134,7 +134,7 @@ Aşağıda admin paneline ait ekran görüntülerine yer verilmiştir. Her sayfa
 ![mail](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/mail.png)
 
 ### 🖼️ Masa Durumları  
-![masadurumlari](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/masadurumlari.png)
+![masadurumlari](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/masadurumlarri.png)
 
 ### 🖼️ Masa Listesi  
 ![masalist](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/masalist.png)
