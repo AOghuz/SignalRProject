@@ -43,7 +43,7 @@ namespace SignalR.BusinessLayer.Concrete
 
         public void TUpdate(Basket entity)
         {
-            throw new NotImplementedException();
+            _basketDal.Update(entity);
         }
     }
 }

@@ -53,7 +53,7 @@ namespace SignalRWebUI.Controllers
 
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", new { id = menuTableId });
             }
 
             return Json(createBasketDto);

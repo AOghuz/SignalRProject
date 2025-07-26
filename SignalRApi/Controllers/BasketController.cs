@@ -14,57 +14,87 @@ namespace SignalRApi.Controllers
 	public class BasketController : ControllerBase
 	{
 		private readonly IBasketService _basketService;
-		public BasketController(IBasketService basketService)
-		{
-			_basketService = basketService;
-		}
-		[HttpGet]
+        private readonly SignalRContext _context;
+        public BasketController(IBasketService basketService,
+                          SignalRContext context)    // ← ctor DI
+        {
+            _basketService = basketService;
+            _context = context;
+        }
+        [HttpGet]
 		public IActionResult GetBasketByMenuTableID(int id)
 		{
 			var values = _basketService.TGetBasketByMenuTableNumber(id);
 			return Ok(values);
 		}
-		[HttpGet("BasketListByMenuTableWithProductName")]
-		public IActionResult BasketListByMenuTableWithProductName(int id)
-		{
-			using var context = new SignalRContext();
-			var values = context.Baskets.Include(x => x.Product).Where(y => y.MenuTableID == id).Select(z => new ResultBasketListWithProducts
-			{
-				BasketID = z.BasketID,
-				Count = z.Count,
-				MenuTableID = z.MenuTableID,
-				Price = z.Price,
-				ProductID = z.ProductID,
-				TotalPrice = z.TotalPrice,
-                ProductName = z.Product != null ? z.Product.ProductName : string.Empty
-            }).ToList();
-			return Ok(values);
-		}
+        [HttpGet("BasketListByMenuTableWithProductName")]
+        public IActionResult BasketListByMenuTableWithProductName(int id)
+        {
+            var values = _context.Baskets
+                                 .Include(b => b.Product)
+                                 .Where(b => b.MenuTableID == id)
+                                 .Select(b => new ResultBasketListWithProducts
+                                 {
+                                     BasketID = b.BasketID,
+                                     MenuTableID = b.MenuTableID,
+                                     ProductID = b.ProductID,
+                                     ProductName = b.Product.ProductName,
+                                     Count = b.Count,
+                                     Price = b.Price,
+                                     TotalPrice = b.Count * b.Price      // ← güvenli
+                                 })
+                                 .ToList();
 
-		[HttpPost]
-		public IActionResult CreateBasket(CreateBasketDto createBasketDto)
-		{
-			//Bahçe 01 --> 45
-			using var context = new SignalRContext();
-			_basketService.TAdd(new Basket()
-			{
-				ProductID = createBasketDto.ProductID,
-				MenuTableID = createBasketDto.MenuTableID,
-				Count = 1,
-				Price = context.Products.Where(x => x.ProductID == createBasketDto.ProductID).Select(y => y.Price).FirstOrDefault(),
-				TotalPrice = createBasketDto.TotalPrice,
-			});
-			return Ok();
-		}
+            return Ok(values);
+        }
+
+
+        [HttpPost]
+        public IActionResult CreateBasket([FromBody] CreateBasketDto dto)
+        {
+            // Ürün fiyatını al
+            var price = _context.Products
+                                .Where(p => p.ProductID == dto.ProductID)
+                                .Select(p => p.Price)
+                                .FirstOrDefault();
+
+            if (price == 0) return BadRequest("Ürün bulunamadı.");
+
+            // Aynı masa + aynı ürün sepette var mı?
+            var basket = _context.Baskets
+                                 .FirstOrDefault(b => b.MenuTableID == dto.MenuTableID
+                                                   && b.ProductID == dto.ProductID);
+
+            if (basket is null)
+            {
+                _basketService.TAdd(new Basket
+                {
+                    ProductID = dto.ProductID,
+                    MenuTableID = dto.MenuTableID,
+                    Count = 1,
+                    Price = price,
+                    TotalPrice = price
+                });
+            }
+            else
+            {
+                basket.Count += 1;
+                basket.TotalPrice = basket.Count * basket.Price;
+                _basketService.TUpdate(basket);
+            }
+
+            return Ok();
+        }
+
         [HttpDelete("{id}")]
         public IActionResult DeleteBasket(int id)
         {
-            var entity = _basketService.TGetByID(id);
-            if (entity is null)
-                return NotFound($"Sepette {id} numaralı ürün yok.");
+            var value = _basketService.TGetByID(id);
+            if (value is null)
+                return NotFound("Sepette böyle bir kayıt yok");
 
-            _basketService.TDelete(entity);            // bu metod SaveChanges yapmalı
-            return Ok("Ürün sepetten silindi");
+            _basketService.TDelete(value);
+            return Ok("Sepetteki ürün silindi");
         }
 
     }

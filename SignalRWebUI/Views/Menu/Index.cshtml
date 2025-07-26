@@ -46,7 +46,7 @@
                                             <h6>
                                                 @item.Price₺
                                             </h6>
-                                            <a href="#" onclick="showproductid(@item.ProductID, @ViewBag.v)">
+                                            <a href="#" onclick="addToBasket(@item.ProductID); return false;">
 
 
                                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -111,7 +111,7 @@
                 </div>
             </div>
             <div class="btn-box">
-                <a href="/Baskets/Index/">
+                <a href="@Url.Action("Index","Baskets", new { id = (int)ViewBag.v })">
                     Sepete Git (@ViewBag.v)
                 </a>
             </div>
@@ -123,29 +123,28 @@
     @await Component.InvokeAsync("_UILayoutScriptComponentPartial")
 
     <script>
+        const menuTableId = @((int)ViewBag.v);
 
-        function showproductid(productId, menuTableId) {
+        function addToBasket(productId) {
             $.ajax({
                 type: 'POST',
-                url: "/Menu/AddBasket",
-                data: {
-                    id: productId,
-                    menuTableId: menuTableId // MenuTableId burada gönderiliyor
+                url: '/Menu/AddBasket',
+                data: { id: productId, menuTableId: menuTableId },
+                success: () => {
+                    swal("Başarılı", "Ürün sepete eklendi!", "success");
                 },
-                success: function () {
-                    swal("Seçilen Ürün ID:" + productId, "Seçtiğiniz Ürün Sepete Eklendi!", "success");
-                },
-                error: function (xhr, status, error) {
-                    console.error("Hata:", error);
-                    console.log("Yanıt:", xhr.responseText);
+                error: (xhr) => {
+                    swal("Hata", xhr.responseText, "error");
                 }
             });
-        };
-
-
-
-
+        }
     </script>
+
+
+
+
+
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 

@@ -37,7 +37,6 @@ namespace SignalRApi.Controllers
         public IActionResult DeleteAbout(int id)
         {
             var value = _aboutService.TGetByID(id);
-            _aboutService.TDelete(value);
             return Ok("Hakkımda Alanı Silindi");
         }
         [HttpPut]
