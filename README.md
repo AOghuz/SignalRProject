@@ -79,7 +79,7 @@ Entity Framework Code First ile oluşturulan veritabanı şeması.
 ### 🖼️ Tanıtım Alanı  
 ![site3](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/site3.png)
 
-### 🖼️ Rezervasyon Formu  
+### 🖼️ İletişim Formu  
 ![site4](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/site4.png)
 
 ### 🖼️ Sipariş Listesi  
@@ -119,7 +119,7 @@ Aşağıda admin paneline ait ekran görüntülerine yer verilmiştir. Her sayfa
 ### 🖼️ Bildirim Sayfası  
 ![bildirim](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/bildirim.png)
 
-### 🖼️ İletişim Mesajları  
+### 🖼️ İletişim 
 ![iletisim](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/iletisim.png)
 
 ### 🖼️ İndirim Kuponları  
