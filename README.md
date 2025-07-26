@@ -85,7 +85,7 @@ Entity Framework Code First ile oluşturulan veritabanı şeması.
 ### 🖼️ Sipariş Listesi  
 ![site5](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/site5.png)
 
-### 🖼️ Sipariş Ödeme Ekranı  
+### 🖼️ Rezervasyon Ekranı  
 ![site6](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/site6.png)
 
 ## 🛒 Sipariş Süreci ve Sistemsel Özellikler
