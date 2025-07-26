@@ -65,7 +65,7 @@
 ---
 ### 🗃️ Veritabanı Yapısı  
 Entity Framework Code First ile oluşturulan veritabanı şeması.  
-![veritabani](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/veritabani.png)
+![veritabani](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/veritabani.png)
 
 
 ## 🌐 Kullanıcı Arayüzü (Site) - Ekran Görüntüleri
@@ -92,15 +92,15 @@ Entity Framework Code First ile oluşturulan veritabanı şeması.
 
 ### 🖼️ Masa Seçimi Ekranı  
 Gerçek zamanlı dolu/boş masa durumu kontrolü.  
-![masasecimi](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/masasecimi.png)
+![masasecimi](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/masasecimi.png)
 
 ### 🖼️ Sepet Listesi  
 Kullanıcının seçtiği ürünleri listeleme ve toplam tutar gösterimi.  
-![sepet](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/sepet.png)
+![sepet](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/sepet.png)
 
 ### 🖼️ Ürün Ekleme Bildirimi  
 Kullanıcıya başarılı ürün ekleme bildirimi ekranı.  
-![urunekleme](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/urunekleme.png)
+![urunekleme](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/urunekleme.png)
 
 
 
