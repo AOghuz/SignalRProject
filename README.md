@@ -63,58 +63,98 @@
 - 📬 **Mail Gönderme Modülü**
 
 ---
-
-## 📦 Proje Yapısı
-
-📸 Admin Paneli - Ekran Görüntüleri
-Aşağıda admin paneline ait ekran görüntülerine yer verilmiştir. Her sayfa, yöneticiye kolay kullanım ve anlık veri takibi imkânı sunar.
-
-🖼️ Hakkımda Sayfası
-SignalRWebUI/wwwroot/signalrimages/admin/about.png
+### 🗃️ Veritabanı Yapısı  
+Entity Framework Code First ile oluşturulan veritabanı şeması.  
+![veritabani](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/veritabani.png)
 
 
-🖼️ Anlık Durum Paneli
-SignalRWebUI/wwwroot/signalrimages/admin/anlikdurum.png
+## 🌐 Kullanıcı Arayüzü (Site) - Ekran Görüntüleri
 
-🖼️ Bildirim Sayfası
-SignalRWebUI/wwwroot/signalrimages/admin/bildirim.png
+### 🖼️ Ana Sayfa  
+![site1](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/site1.png)
 
-🖼️ İletişim Mesajları
-SignalRWebUI/wwwroot/signalrimages/admin/iletisim.png
+### 🖼️ Menü Tanıtımı  
+![site2](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/site2.png)
 
-🖼️ İndirim Kuponları
-SignalRWebUI/wwwroot/signalrimages/admin/indirim.png
+### 🖼️ Tanıtım Alanı  
+![site3](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/site3.png)
 
-🖼️ İstatistik Paneli
-SignalRWebUI/wwwroot/signalrimages/admin/istatistik.png
+### 🖼️ Rezervasyon Formu  
+![site4](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/site4.png)
 
-🖼️ Kategori Yönetimi
-SignalRWebUI/wwwroot/signalrimages/admin/kategori.png
+### 🖼️ Sipariş Listesi  
+![site5](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/site5.png)
 
-🖼️ Mail Gönderme Sayfası
-SignalRWebUI/wwwroot/signalrimages/admin/mail.png
+### 🖼️ Sipariş Ödeme Ekranı  
+![site6](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/site6.png)
 
-🖼️ Masa Durumları
-SignalRWebUI/wwwroot/signalrimages/admin/masadurumlari.png
+## 🛒 Sipariş Süreci ve Sistemsel Özellikler
 
-🖼️ Masa Listesi
-SignalRWebUI/wwwroot/signalrimages/admin/masalist.png
+### 🖼️ Masa Seçimi Ekranı  
+Gerçek zamanlı dolu/boş masa durumu kontrolü.  
+![masasecimi](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/masasecimi.png)
 
-🖼️ Öne Çıkanlar
-SignalRWebUI/wwwroot/signalrimages/admin/onecikanlar.png
+### 🖼️ Sepet Listesi  
+Kullanıcının seçtiği ürünleri listeleme ve toplam tutar gösterimi.  
+![sepet](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/sepet.png)
 
-🖼️ QR Kod Oluşturucu
-SignalRWebUI/wwwroot/signalrimages/admin/qrcode.png
+### 🖼️ Ürün Ekleme Bildirimi  
+Kullanıcıya başarılı ürün ekleme bildirimi ekranı.  
+![urunekleme](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/site/urunekleme.png)
 
-🖼️ Referanslar
-SignalRWebUI/wwwroot/signalrimages/admin/referans.png
 
-🖼️ Rezervasyon Yönetimi
-SignalRWebUI/wwwroot/signalrimages/admin/rezervasyon.png
 
-🖼️ Ayarlar Sayfası
-SignalRWebUI/wwwroot/signalrimages/admin/setting.png
 
-🖼️ Ürün Yönetimi
-SignalRWebUI/wwwroot/signalrimages/admin/ürün.png
+## 📸 Admin Paneli - Ekran Görüntüleri
+
+Aşağıda admin paneline ait ekran görüntülerine yer verilmiştir. Her sayfa, yöneticilere içerik ve işlem kontrolü sağlamaktadır.
+
+### 🖼️ Hakkımda Sayfası  
+![about](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/about.png)
+
+### 🖼️ Anlık Durum Paneli  
+![anlikdurum](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/anlikdurum.png)
+
+### 🖼️ Bildirim Sayfası  
+![bildirim](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/bildirim.png)
+
+### 🖼️ İletişim Mesajları  
+![iletisim](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/iletisim.png)
+
+### 🖼️ İndirim Kuponları  
+![indirim](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/indirim.png)
+
+### 🖼️ İstatistik Paneli  
+![istatistik](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/istatistik.png)
+
+### 🖼️ Kategori Yönetimi  
+![kategori](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/kategori.png)
+
+### 🖼️ Mail Gönderme  
+![mail](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/mail.png)
+
+### 🖼️ Masa Durumları  
+![masadurumlari](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/masadurumlari.png)
+
+### 🖼️ Masa Listesi  
+![masalist](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/masalist.png)
+
+### 🖼️ Öne Çıkanlar  
+![onecikanlar](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/onecikanlar.png)
+
+### 🖼️ QR Kod Oluşturucu  
+![qrcode](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/qrcode.png)
+
+### 🖼️ Referanslar  
+![referans](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/referans.png)
+
+### 🖼️ Rezervasyonlar  
+![rezervasyon](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/rezervasyon.png)
+
+### 🖼️ Ayarlar  
+![setting](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/setting.png)
+
+### 🖼️ Ürün Yönetimi  
+![ürün](https://github.com/AOghuz/SignalRProject/blob/master/SignalRWebUI/wwwroot/signalrimages/admin/ürün.png)
+
 
