@@ -1,4 +1,4 @@
-# 🍽️ SignalR Destekli Restoran Rezervasyon ve Sipariş Sistemi
+# 🍽️ SignalR Destekli Restorant Rezervasyon ve Sipariş Sistemi
 
 **ASP.NET Core 8.0 Web API** ve **MVC** mimarisi kullanılarak inşa edilen sistemde, gerçek zamanlı iletişim için **SignalR**, veri yönetimi için **Entity Framework Code First**, mimari yapı olarak ise **N-Tier Architecture (Katmanlı Mimari)** ve **Repository Pattern** kullanılmıştır.
 
